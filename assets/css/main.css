@@ -72,6 +72,18 @@ input, select, textarea {
 	appearance: none;
 }
 
+.custom-icon {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    border-radius: 50%;
+    background: #f0f0f0; /* Adjust the background color as needed */
+    padding: 20px; /* Adjust the padding as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+    display: block;
+    margin: 0 auto 20px; /* Center the icon and add some margin below */
+    object-fit: cover; /* Ensure the image covers the entire area */
+}
+
 /* Basic */
 
 	@-ms-viewport {
