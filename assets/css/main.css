@@ -84,6 +84,15 @@ input, select, textarea {
     object-fit: cover; /* Ensure the image covers the entire area */
 }
 
+img.custom-icon {
+    display: block;
+    margin: 0 auto 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 /* Basic */
 
 	@-ms-viewport {
