@@ -23,6 +23,11 @@ Output is written to `out/`.
 
 ## Deploy
 
-Pushes to `main` trigger the GitHub Actions workflow in `.github/workflows/deploy.yml`.
+Pushes to `main` trigger the GitHub Actions workflow in `.github/workflows/deploy.yml`. You can also redeploy manually from the Actions tab via **workflow_dispatch**.
 
-Ensure GitHub Pages source is set to **GitHub Actions** in repository settings.
+Repository settings (Settings → Pages):
+
+- **Source:** GitHub Actions
+- **Custom domain:** `aseefdurrani.com` (required for Actions-based deploys; the `public/CNAME` file alone is not used)
+
+DNS for the apex domain should use GitHub Pages A records (`185.199.108.153`–`185.199.111.153`).
