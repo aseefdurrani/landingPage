@@ -11,29 +11,36 @@ export default function About() {
 
   return (
     <SectionWrapper id="about" ariaLabel="About">
-      <div className="grid items-center gap-12 lg:grid-cols-[auto_1fr]">
+      <div className="grid items-start gap-8 lg:grid-cols-[auto_1fr] lg:items-center lg:gap-12">
         <motion.div
           initial={prefersReducedMotion ? false : "hidden"}
           whileInView="visible"
           viewport={viewportOnce}
           variants={fadeIn}
-          className="group relative mx-auto aspect-[4/5] w-[220px] shrink-0 overflow-hidden rounded border border-border transition-[border-color,box-shadow] hover:border-accent/30 hover:shadow-[0_8px_32px_rgba(6,182,212,0.1)] lg:mx-0"
+          className="group relative order-2 overflow-hidden rounded border border-border transition-[border-color,box-shadow] hover:border-accent/30 hover:shadow-[0_8px_32px_rgba(6,182,212,0.1)] lg:order-none lg:row-span-2 lg:aspect-[4/5] lg:w-[220px] lg:shrink-0 aspect-[16/10] w-full sm:aspect-[2/1]"
         >
           <Image
             src={site.identity.aboutImage}
             alt={`${site.identity.name} portrait`}
             fill
-            className="object-cover brightness-105 transition-transform duration-500 group-hover:scale-[1.03]"
-            sizes="220px"
+            className="object-cover object-top brightness-105 transition-transform duration-500 group-hover:scale-[1.03] lg:object-center"
+            sizes="(max-width: 1024px) 100vw, 220px"
             priority
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/60 to-transparent lg:hidden"
           />
         </motion.div>
 
-        <div>
+        <div className="order-1 lg:order-none">
           <SectionHeading
             title="About"
             subtitle="Building across hardware, software, and AI."
           />
+        </div>
+
+        <div className="order-3 lg:order-none lg:col-start-2 lg:row-start-2">
           <p className="text-lg leading-relaxed text-muted">{site.identity.bio}</p>
           <dl className="mt-8 grid gap-4 sm:grid-cols-2">
             <div className="card-surface p-4">

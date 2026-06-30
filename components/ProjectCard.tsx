@@ -3,7 +3,7 @@
 import type { Project } from "@/data/site";
 import { staggerItem } from "@/lib/motion";
 import { motion, useReducedMotion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Plus } from "lucide-react";
 
 interface ProjectCardProps {
   project: Project;
@@ -58,8 +58,15 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
         </div>
       </div>
 
-      <div className="absolute inset-0 flex items-center justify-center bg-background/70 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100">
-        <span className="inline-flex items-center gap-2 rounded border border-accent/50 bg-surface px-3 py-1.5 text-xs text-accent shadow-[0_0_20px_rgba(6,182,212,0.15)] sm:text-sm">
+      <div
+        aria-hidden="true"
+        className="absolute bottom-3 right-3 flex size-7 items-center justify-center rounded border border-accent/40 bg-surface/95 text-accent shadow-[0_0_12px_rgba(6,182,212,0.12)] sm:hidden"
+      >
+        <Plus size={16} strokeWidth={2.5} />
+      </div>
+
+      <div className="absolute inset-0 hidden items-center justify-center bg-background/70 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 sm:flex">
+        <span className="inline-flex items-center gap-2 rounded border border-accent/50 bg-surface px-3 py-1.5 text-sm text-accent shadow-[0_0_20px_rgba(6,182,212,0.15)]">
           View details
           <ExternalLink size={14} />
         </span>
