@@ -60,7 +60,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
 
       <div
         aria-hidden="true"
-        className="absolute bottom-3 right-3 flex size-7 items-center justify-center rounded border border-accent/40 bg-surface/95 text-accent shadow-[0_0_12px_rgba(6,182,212,0.12)] sm:hidden"
+        className="absolute bottom-3 right-3 flex size-7 items-center justify-center rounded border border-white bg-surface/95 text-white sm:hidden"
       >
         <Plus size={16} strokeWidth={2.5} />
       </div>
