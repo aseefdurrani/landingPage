@@ -23,7 +23,7 @@ export default function About() {
             src={site.identity.aboutImage}
             alt={`${site.identity.name} portrait`}
             fill
-            className="object-cover object-top brightness-105 transition-transform duration-500 group-hover:scale-[1.03] lg:object-center"
+            className="object-cover object-center brightness-105 transition-transform duration-500 group-hover:scale-[1.03]"
             sizes="(max-width: 1024px) 100vw, 220px"
             priority
           />
